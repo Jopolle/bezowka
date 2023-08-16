@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 @font-face {
-    font-family: LogoFont;
-    src: url(fonty/BABYCAKES.ttf);
-}
-@font-face {
-    font-family: CakeFont;
-    src: url(fonty/Cakecafe.ttf);
-}
-
-@font-face {
     font-family: CoffeeFont;
     src: url(fonty/CoffeCake.ttf);
 }
@@ -49,7 +40,6 @@ a {
     padding: 0;
     left: 0;
 }
-
 
 ul {
     list-style-type: none;
@@ -144,19 +134,19 @@ nav a:hover::after {
 }
 
 #about-us {
-    background-image: url('about-us.jpg');
+    background-image: url('img/banner1.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #contact {
-    background-image: url('contact.jpg');
+    background-image: url('img/banner2.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #location {
-    background-image: url('location.jpg');
+    background-image: url('img/banner3.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -232,57 +222,65 @@ nav a:hover::after {
 }
 
 
-
-
-
-/*.container{*/
-/*    height: 200px;*/
-/*    width: 100%;*/
-
-/*}*/
-
-/*
-@media only screen and (max-width: 768px) {
-    body {
-        font-size: 50%;
-    }
-
-    nav ul {
-        padding-right: 0%;
-    }
-
-    #nav-logo {
-        height: 60px;
-    }
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-@media only screen and (max-width: 480px) {
-    body {
-        font-size: 80%;
-    }
-
-    nav ul {
-        padding-right: 5%;
-    }
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 70%;
+    max-height: 80%;
 }
-*/
 
-@media screen and (max-width: 768px) {
-    #nav-items {
-        display: none;
-    }
-
-    #nav-logo-wrapper {
-        width: 100%;
-        text-align: center;
-    }
-
-    #nav-logo a {
-        display: block;
-    }
-
-    #nav-items li {
-        display: block;
-        margin: 10px 0;
-    }
+.lightbox-caption {
+    text-align: center;
+    padding: 10px;
+    color: white;
 }
+
+.close {
+    position: fixed;
+    top: calc(25px + var(--navbar-height));
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+#lightbox-img{
+    height: 70vh;
+    padding-top: 4%;
+
+
+}
+.lightbox-mini {
+    width: 200px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+

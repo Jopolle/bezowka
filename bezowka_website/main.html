@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
    <body>
+
 	   <div id="wrapper">
 	   	<nav>
 			<ul id="nav-items">
@@ -20,33 +21,70 @@
 			</ul>
 	   	</nav>
 	   	<div id="content">
-			<section id="banner-1">
+			<section id="banner-1" class="slide">
 				<h1>Bezówka</h1>
 				<h2>Cukiernia Artystyczna</h2>
 			</section>
-			<section class="banner" id="about-us">
-        <div class="banner-content">
-            <h1>About Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elit lacinia.</p>
-        </div>
-    </section>
+			<section class="banner slide" id="about-us">
+        		<div class="banner-content">
+            		<h1>About Us</h1>
+            		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elit lacinia.</p>
+        		</div>
+    		</section>
 
-    <section class="banner" id="contact">
-        <div class="banner-content">
-            <h1>Contact</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla tortor.</p>
-        </div>
-    </section>
+    		<section class="banner slide" id="offer">
+        		<div class="banner-content">
+            		<h1>Oferta</h1>
+            		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla tortor.</p>
+        		</div>
+    		</section>
 
-    <section class="banner" id="location">
-        <div class="banner-content">
-            <h1>Location</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat tincidunt.</p>
-        </div>
-	</section>
+    		<section class="banner slide" id="contact">
+        		<div class="banner-content">
+            		<h1>Kontakt</h1>
+            		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat tincidunt.</p>
+        		</div>
+			</section>
+			<section class="banner slide" id="blog">
+				<div class="banner-content">
+					<h1>Blog</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat tincidunt.</p>
+				</div>
+			</section>
+			<section class="banner">
+				<div class="lightbox" id="lightbox">
+					<span class="close" onclick="closeLightbox()">&times;</span>
+					<img class="lightbox-content" id="lightbox-img">
+					<div class="lightbox-caption" id="caption"></div>
+				</div>
+
+				<img src="img/banner1.jpg" alt="Image 1" onclick="openLightbox(1)" class="lightbox-mini">
+				<img src="img/banner2.jpg" alt="Image 2" onclick="openLightbox(2)" class="lightbox-mini">
+				<img src="img/banner3.jpg" alt="Image 3" onclick="openLightbox(3)" class="lightbox-mini">
+				<img src="img/banner4.jpg" alt="Image 4" onclick="openLightbox(4)" class="lightbox-mini">
+				<img src="img/banner2.jpg" alt="Image 5" onclick="openLightbox(5)" class="lightbox-mini">
+
+				<script>
+					function openLightbox(imageIndex) {
+						var lightbox = document.getElementById('lightbox');
+						var img = document.getElementById('lightbox-img');
+						var caption = document.getElementById('caption');
+
+						lightbox.style.display = "block";
+						img.src = 'img/banner' + imageIndex + '.jpg';
+						caption.innerHTML = 'Image ' + imageIndex;
+					}
+
+					function closeLightbox() {
+						document.getElementById('lightbox').style.display = "none";
+					}
+				</script>
+
+
+			</section>
+
 		</div>
 	   </div>
-
 	   <footer class="footer">
 		   <div class="footer-column">
 			   <h3>General Info</h3>
@@ -70,6 +108,5 @@
 			   </form>
 		   </div>
 	   </footer>
-
    </body>
 </html>
