@@ -1,18 +1,11 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
+let slides = document.querySelectorAll(".slide");
+let currentIndex = 0;
+let slideInterval = 3000; // 3 seconds
 
-window.addEventListener('wheel', function (e) {
-    const delta = e.deltaY;
-    if (delta < 0 && currentSlide > 0) {
-        // Scrolling up
-        currentSlide--;
-    } else if (delta > 0 && currentSlide < slides.length - 1) {
-        // Scrolling down
-        currentSlide++;
-    }
+function nextSlide() {
+    slides[currentIndex].style.opacity = 0;
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].style.opacity = 1;
+}
 
-    window.scrollTo({
-        top: slides[currentSlide].offsetTop,
-        behavior: 'smooth'
-    });
-});
+setInterval(nextSlide, slideInterval);

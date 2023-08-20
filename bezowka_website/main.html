@@ -21,58 +21,83 @@
 			</ul>
 	   	</nav>
 	   	<div id="content">
-			<section id="banner-1" class="slide">
-				<h1>Bezówka</h1>
-				<h2>Cukiernia Artystyczna</h2>
-			</section>
-			<section class="banner slide" id="about-us">
-        		<div class="banner-content">
-            		<h1>About Us</h1>
-            		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elit lacinia.</p>
-        		</div>
-    		</section>
-
-    		<section class="banner slide" id="offer">
-        		<div class="banner-content">
-            		<h1>Oferta</h1>
-            		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla tortor.</p>
-        		</div>
-    		</section>
-
-    		<section class="banner slide" id="contact">
-        		<div class="banner-content">
-            		<h1>Kontakt</h1>
-            		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat tincidunt.</p>
-        		</div>
-			</section>
-			<section class="banner slide" id="blog">
-				<div class="banner-content">
-					<h1>Blog</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat tincidunt.</p>
+				<div class="slideshow">
+					<div class="slide">
+						<img src="img/banner1.jpg" alt="Image 1">
+						<div class="text-box">
+							<h2>Lorem Ipsum</h2>
+							<h3>Dolor Sit Amet</h3>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="img/banner2.jpg" alt="Image 2">
+						<div class="text-box">
+							<h2>Lorem Ipsum</h2>
+							<h3>Dolor Sit Amet</h3>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="img/banner3.jpg" alt="Image 3">
+						<div class="text-box">
+							<h2>Lorem Ipsum</h2>
+							<h3>Dolor Sit Amet</h3>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="img/banner4.jpg" alt="Image 4">
+						<div class="text-box">
+							<h2>Lorem Ipsum</h2>
+							<h3>Dolor Sit Amet</h3>
+						</div>
+					</div>
 				</div>
-			</section>
-			<section class="banner">
-				<div class="lightbox" id="lightbox">
-					<span class="close" onclick="closeLightbox()">&times;</span>
+
+				<script src="script.js"></script>
+
+			<section id="about-us">
+        		<div class="banner-full banner-full-paragraph">
+					<img src="img/tort3.jpeg">
+            		<div>
+					<h1>About Us</h1>
+            		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elit lacinia.</p>
+					</div>
+        		</div>
+    		</section>
+
+<!--    		<section class="banner slide" id="offer">-->
+<!--        		<div class="banner-content">-->
+<!--            		<h1>Oferta</h1>-->
+<!--            		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla tortor.</p>-->
+<!--        		</div>-->
+<!--    		</section>-->
+
+<!--    		<section class="banner slide" id="contact">-->
+<!--        		<div class="banner-content">-->
+<!--            		<h1>Kontakt</h1>-->
+<!--            		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat tincidunt.</p>-->
+<!--        		</div>-->
+<!--			</section>-->
+			<section class="banner-full">
+				<div class="lightbox" id="lightbox" onclick="closeLightbox()">
 					<img class="lightbox-content" id="lightbox-img">
 					<div class="lightbox-caption" id="caption"></div>
 				</div>
 
-				<img src="img/banner1.jpg" alt="Image 1" onclick="openLightbox(1)" class="lightbox-mini">
-				<img src="img/banner2.jpg" alt="Image 2" onclick="openLightbox(2)" class="lightbox-mini">
-				<img src="img/banner3.jpg" alt="Image 3" onclick="openLightbox(3)" class="lightbox-mini">
-				<img src="img/banner4.jpg" alt="Image 4" onclick="openLightbox(4)" class="lightbox-mini">
-				<img src="img/banner2.jpg" alt="Image 5" onclick="openLightbox(5)" class="lightbox-mini">
+				<img src="img/banner1.jpg" alt="Image 1" onclick="openLightbox(src,'zdjecie 1')" class="lightbox-mini">
+				<img src="img/banner2.jpg" alt="Image 2" onclick="openLightbox(src,'zdjecie 2')" class="lightbox-mini">
+				<img src="img/banner3.jpg" alt="Image 3" onclick="openLightbox(src,'zdjecie 3')" class="lightbox-mini">
+				<img src="img/banner4.jpg" alt="Image 4" onclick="openLightbox(src,'zdjecie 4')" class="lightbox-mini">
+				<img src="img/banner2.jpg" alt="Image 5" onclick="openLightbox(src,'zdjecie 5')" class="lightbox-mini">
 
 				<script>
-					function openLightbox(imageIndex) {
+					function openLightbox(src, alt) {
 						var lightbox = document.getElementById('lightbox');
 						var img = document.getElementById('lightbox-img');
 						var caption = document.getElementById('caption');
 
 						lightbox.style.display = "block";
-						img.src = 'img/banner' + imageIndex + '.jpg';
-						caption.innerHTML = 'Image ' + imageIndex;
+						img.src = src;
+						caption.innerHTML = alt;
 					}
 
 					function closeLightbox() {
@@ -82,6 +107,31 @@
 
 
 			</section>
+			<section id="blog">
+				<a href="blog.html">
+				<div class="blog-headline-container">
+					<img src="img/banner1.jpg" class="blog-headline-image"/>
+					<article class="blog-headline">
+						<h2 class="blog-headline-title">Blog Post Title</h2>
+						<p class="blog-headline-date">August 16, 2023</p>
+						<p class="blog-headline-content">This is the content of the blog post...</p>
+
+					</article>
+				</div>
+				</a>
+				<a href="blog.html">
+					<div class="blog-headline-container">
+						<img src="img/banner1.jpg" class="blog-headline-image"/>
+						<article class="blog-headline">
+							<h2 class="blog-headline-title">Blog Post Title</h2>
+							<p class="blog-headline-date">August 16, 2023</p>
+							<p class="blog-headline-content">This is the content of the blog post...</p>
+
+						</article>
+					</div>
+				</a>
+			</section>
+
 
 		</div>
 	   </div>

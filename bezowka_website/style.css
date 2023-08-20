@@ -112,19 +112,10 @@ nav a:hover::after {
     width: auto;
     margin-top: -20px;
 }
-#banner-1{
-    background-image: url(img/temp_background.jpg);
-    background-position: center;
-    background-size: 20%;
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-    padding-top: var(--navbar-height) ;
-}
 
-.banner {
+.banner-full {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - var(--navbar-height));
     position: relative;
     overflow: hidden;
     display: flex;
@@ -133,23 +124,54 @@ nav a:hover::after {
     padding-top: var(--navbar-height);
 }
 
-#about-us {
-    background-image: url('img/banner1.jpg');
-    background-size: cover;
-    background-position: center;
+.banner-full-headline {
+    flex-direction: column;
 }
 
-#contact {
-    background-image: url('img/banner2.jpg');
-    background-size: cover;
-    background-position: center;
+.banner-full-paragraph{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+.banner-full-paragraph div {
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 40vw;
+    background: var(--ral);
+    color: var(--indian-red);
+}
+.banner-full-paragraph div p{
+    min-height: 16vw;
+}
+.banner-full-paragraph img{
+    height: 40vw;
+    width: 40vw;
+    object-fit: cover;
 }
 
-#location {
-    background-image: url('img/banner3.jpg');
-    background-size: cover;
-    background-position: center;
-}
+
+/*#about-us {*/
+/*    background-image: url('img/banner1.jpg');*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*}*/
+
+/*#contact {*/
+/*    background-image: url('img/banner2.jpg');*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*}*/
+
+/*#location {*/
+/*    background-image: url('img/banner3.jpg');*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*}*/
 
 .banner-content {
     width: 100%;
@@ -161,13 +183,13 @@ nav a:hover::after {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.banner h1 {
+.banner-full h1 {
     margin: 0;
     padding: 0;
     font-size: 36px;
 }
 
-.banner p {
+.banner-full p {
     margin: 10px 0;
     padding: 0;
     font-size: 18px;
@@ -255,14 +277,11 @@ nav a:hover::after {
     color: #f1f1f1;
     font-size: 40px;
     transition: 0.3s;
-    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
     text-decoration: none;
-    cursor: pointer;
 }
 #lightbox-img{
     height: 70vh;
@@ -277,7 +296,88 @@ nav a:hover::after {
 }
 
 
+.blog-headline-container {
+    width: 50vw;
+    height: 22vh;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    padding-left: 1vw;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    border-radius: 5px;
+}
 
+.blog-headline {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.blog-headline-title {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.blog-headline-date {
+    margin: 10px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.blog-headline-content {
+    margin-top: 20px;
+    color: #555;
+    font-size: 16px;
+    flex: 1;
+}
+.blog-headline-image{
+    width: 19vh;
+    height: 19vh;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+
+.slideshow {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    padding-top: var(--navbar-height);
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.text-box {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px 30px;
+    text-align: center;
+    z-index: 50;
+}
+
+.text-box h2, .text-box h3 {
+    margin: 5px 0;
+}
+
+.slide:nth-child(1) {
+    opacity: 1;
+}
 
 
 
