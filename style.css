@@ -17,6 +17,7 @@
     --hunter-green: #346732ff;
     --indigo-dye: #003d5bff;
     --navbar-height: 15vh;
+    --banner-width: 80vw;
 }
 
 
@@ -34,7 +35,7 @@ html, body {
 }
 
 #content {
-    width: 100vw;
+    width: var(--banner-width);
     height: auto;
     min-height: 140vh;
     padding-top: var(--navbar-height);
@@ -42,6 +43,7 @@ html, body {
     left: 0;
     top: 0;
     margin: 0 auto;
+    background-color: var(--vanilla);
 }
 
 
@@ -138,14 +140,14 @@ nav a {
 }
 
 .banner-full {
-    width: 100vw;
+    width: var(--banner-width);
     height: calc(100vh - var(--navbar-height));
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: var(--navbar-height);
+    padding-top: 50px;
 }
 
 .banner-full-headline {
@@ -164,7 +166,7 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60vw;
+    width: calc(0.6 * var(--banner-width));
     height: 40vw;
     background: var(--ral);
     color: var(--indian-red);
@@ -190,7 +192,7 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60vw;
+    width: calc(0.6 * var(--banner-width));
     height: 40vw;
     background: var(--ral);
     color: var(--indian-red);
@@ -204,10 +206,6 @@ nav a {
     object-fit: cover;
 
 }
-
-
-
-
 
 .banner-content {
     width: 100%;
@@ -231,12 +229,13 @@ nav a {
     font-size: 18px;
 }
 
-.footer {
-    background-color: black;
-    color: white;
+footer {
+    background-color: var(--vanilla);
+    color: var(--indian-red);
     padding: 0;
     display: flex;
     justify-content: space-around;
+    box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, .2);
 }
 
 .footer-column {
@@ -253,7 +252,7 @@ nav a {
 .footer-column a {
     margin: 5px 0;
     text-decoration: none;
-    color: white;
+    color: var(--ral);
 }
 
 .footer-column a:hover {
@@ -265,11 +264,12 @@ nav a {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
+    resize: none;
 }
 
 .footer-column form input[type="submit"] {
-    background-color: #444;
+    background-color: var(--indian-red);
     border: none;
     color: white;
     cursor: pointer;
@@ -284,7 +284,7 @@ nav a {
     display: none;
     position: fixed;
     /* z-index: 1; */
-    padding-top: 100px;
+    padding-top: 50px;
     left: 0;
     top: 0;
     width: 100%;
@@ -308,7 +308,7 @@ nav a {
 
 .close {
     position: fixed;
-    top: calc(25px + var(--navbar-height));
+    /* top: calc(25px + var(--navbar-height)); */
     right: 35px;
     color: #f1f1f1;
     font-size: 40px;
@@ -387,7 +387,7 @@ nav a {
 #slideshow-wrapper h1{
     z-index: 10;
     position: absolute;
-    width: 100vw;
+    width: var(--banner-width);
     top: 35vh;
     transform: translate(0, -50%);
     color: var(--ral);
@@ -397,14 +397,14 @@ nav a {
 
 .slideshow {
     position: relative;
-    width: 100vw;
+    width: var(--banner-width);
     height: 70vh;
     padding-top: 10px;
     margin: 0;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
 }
 
 .slide {
@@ -468,5 +468,7 @@ nav a {
 .offer p {
     margin-top: 5px;
 }
-
+.banner_section{
+    height: 40vh;
+}
 
